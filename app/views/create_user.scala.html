@@ -1,0 +1,22 @@
+@(createUserForm: Form[UserModel], result: Option[String] = None)(implicit messagesProvider: MessagesProvider, request: Request[_])
+@implicitFieldConstructor = @{ b4.horizontal.fieldConstructor("col-md-2", "col-md-10") }
+
+@main("Create user") {
+
+    <div class="container">
+        <h1>Create a new user</h1>
+        <div class="form-group col-md-6 col-offset-3">
+        @b4.vertical.form(action = helper.CSRF(routes.CreateUserController.createUser())) { implicit vfc =>
+            @b4.text(createUserForm("userId"), '_label -> "User ID", 'placeholder -> "Username")
+            @b4.email(createUserForm("email"), '_label -> "Email", 'placeholder -> "example@mail.com")
+            @b4.password(createUserForm("password"), '_label -> "Password", 'placeholder -> "Password")
+            @b4.submit('class -> "btn btn-default btn-dark") { Sign up }
+        }
+        </div>
+
+        @if(result.isDefined) {
+            <p>@result.get</p>
+        }
+
+    </div>
+}

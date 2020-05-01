@@ -1,0 +1,30 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+@(message: String)
+
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+@main("BootstrapBilly - Home") {
+
+    @*
+     * Get an `Html` object by calling the built-in Play welcome
+     * template and passing a `String` message.
+     *@
+    @*
+    @welcome(message, style = "scala")
+    *@
+    <div class="container">
+        <div class="jumbotron m-5">
+            <h1 class="display-4">Get started!</h1>
+            <p class="lead">Start using the world's most simplistic social media website.</p>
+            <hr class="my-4">
+            <p>Click the button below to register!</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Register</a>
+        </div>
+    </div>
+}
