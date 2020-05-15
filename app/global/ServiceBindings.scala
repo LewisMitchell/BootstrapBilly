@@ -2,8 +2,8 @@ package global
 
 import controllers.CreateUserController
 import forms.{UserForms, UserFormsImpl}
-import play.api.{Configuration, Environment}
 import play.api.inject.{Binding, Module}
+import play.api.{Configuration, Environment}
 import repositories.{MongoInitRepository, MongoInitRepositoryImpl}
 import services.{CreateUserService, CreateUserServiceImpl}
 

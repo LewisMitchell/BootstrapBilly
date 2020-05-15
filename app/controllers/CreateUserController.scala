@@ -2,15 +2,13 @@ package controllers
 
 import forms.UserForms
 import javax.inject.{Inject, Singleton}
-import models.UserModel
 import play.api.Logger
-import play.api.i18n.{I18nSupport, Lang, Messages, MessagesApi, MessagesImpl, MessagesProvider}
-import play.api.libs.json.{JsValue, Json}
-import play.api.mvc.{AbstractController, Action, ActionBuilder, AnyContent, BaseController, ControllerComponents, Request, Results}
+import play.api.i18n.I18nSupport
+import play.api.mvc._
 import services.{CreateUserService, HashingService}
 
-import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.Future
 
 @Singleton
 class CreateUserController @Inject() (override val controllerComponents: ControllerComponents,

@@ -1,16 +1,16 @@
 package controllers
 
 import forms.UserForms
+import org.mockito.ArgumentMatchers._
+import org.mockito.Mockito._
 import org.scalatestplus.mockito.MockitoSugar
 import org.scalatestplus.play.PlaySpec
-import org.mockito.Mockito._
 import play.api.http.Status
 import play.api.mvc.Result
+import play.api.test.CSRFTokenHelper._
 import play.api.test.FakeRequest
 import play.api.test.Helpers._
 import services.CreateUserService
-import org.mockito.ArgumentMatchers._
-import play.api.test.CSRFTokenHelper._
 
 import scala.concurrent.Future
 

@@ -3,7 +3,6 @@ package forms
 import javax.inject.Inject
 import models.UserModel
 import play.api.data.Form
-import play.api.data._
 import play.api.data.Forms._
 
 class UserFormsImpl @Inject()() extends UserForms
