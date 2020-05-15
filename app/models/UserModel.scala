@@ -1,9 +1,6 @@
 package models
 
-import java.security.MessageDigest
-
-import play.api.libs.json.{Format, JsResult, JsValue, Json, OFormat, Reads, Writes}
-import reactivemongo.api.bson.{BSONDocumentWriter, Macros}
+import play.api.libs.json._
 import services.HashingService
 
 

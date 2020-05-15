@@ -7,8 +7,9 @@ import play.api.libs.json.OFormat
 import reactivemongo.api.bson.collection.BSONCollection
 import reactivemongo.api.{AsyncDriver, MongoConnection}
 import reactivemongo.bson._
-import scala.concurrent.{ExecutionContext, Future}
+
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.Future
 
 class MongoInitRepositoryImpl @Inject()(val configuration: Configuration) extends MongoInitRepository
 
