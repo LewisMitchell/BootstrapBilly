@@ -9,7 +9,7 @@ import play.api.data.Forms._
 class UserFormsImpl @Inject()() extends UserForms
 
 trait UserForms {
-  def userForm() = Form(
+  def userForm(): Form[UserModel] = Form(
       mapping(
         "userId" -> text
         .verifying(_.nonEmpty),

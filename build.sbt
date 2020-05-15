@@ -1,4 +1,4 @@
-name := "Play28ReactiveMongo"
+name := "BootstrapBilly"
  
 version := "1.0" 
       
@@ -13,7 +13,8 @@ scalaVersion := "2.13.2"
 libraryDependencies ++= Seq(
   "org.reactivemongo" %% "play2-reactivemongo" % "0.20.10-play27",
   "com.adrianhurt" %% "play-bootstrap" % "1.6.1-P28-B4",
-  "org.reactivemongo" %% "reactivemongo-bson-macros" % "0.20.10"
+  "org.reactivemongo" %% "reactivemongo-bson-macros" % "0.20.10",
+  "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % "test"
 )
 
 libraryDependencies ++= Seq( jdbc , ehcache , ws , specs2 % Test , guice )
